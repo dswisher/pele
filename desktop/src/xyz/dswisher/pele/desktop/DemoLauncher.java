@@ -2,7 +2,7 @@ package xyz.dswisher.pele.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import xyz.dswisher.pele.demos.simplegame.DropDemo;
+import xyz.dswisher.pele.demos.simplegame.DropGame;
 import xyz.dswisher.pele.demos.squidlib.BasicDemo;
 import xyz.dswisher.pele.demos.squidlib.EverythingDemo;
 import xyz.dswisher.pele.demos.squidlib.ImageDemo;
@@ -40,7 +40,7 @@ public class DemoLauncher {
                 config.title = "Drop";
                 config.width = 800;
                 config.height = 480;
-                new LwjglApplication(new DropDemo(), config);
+                new LwjglApplication(new DropGame(), config);
                 break;
 
             case "everything":
