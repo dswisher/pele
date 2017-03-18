@@ -1,4 +1,4 @@
-package xyz.dswisher.pele.demos;
+package xyz.dswisher.pele.demos.squidlib;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -21,6 +21,7 @@ import squidpony.squidmath.RNG;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// Squidlib demo: https://github.com/SquidPony/SquidLib/tree/master/squidlib/src/test/java/squidpony/gdx/examples
 public class BasicDemo extends ApplicationAdapter {
     SpriteBatch batch;
 
@@ -265,6 +266,30 @@ public class BasicDemo extends ApplicationAdapter {
                     case 'D':
                     {
                         move(1, 0);
+                        break;
+                    }
+                    case SquidInput.UP_LEFT_ARROW:
+                    case 'y':
+                    case 'Y': {
+                        move(-1, -1);
+                        break;
+                    }
+                    case SquidInput.UP_RIGHT_ARROW:
+                    case 'u':
+                    case 'U': {
+                        move(1, -1);
+                        break;
+                    }
+                    case SquidInput.DOWN_RIGHT_ARROW:
+                    case 'n':
+                    case 'N': {
+                        move(1, 1);
+                        break;
+                    }
+                    case SquidInput.DOWN_LEFT_ARROW:
+                    case 'b':
+                    case 'B': {
+                        move(-1, 1);
                         break;
                     }
                     case 'Q':

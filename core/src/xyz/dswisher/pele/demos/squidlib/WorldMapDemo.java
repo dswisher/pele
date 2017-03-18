@@ -1,4 +1,4 @@
-package xyz.dswisher.pele.demos;
+package xyz.dswisher.pele.demos.squidlib;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -17,6 +17,7 @@ import squidpony.squidmath.Coord;
 
 import java.util.List;
 
+// Squidlib demo: https://github.com/SquidPony/SquidLib/tree/master/squidlib/src/test/java/squidpony/gdx/examples
 public class WorldMapDemo extends ApplicationAdapter {
 
     private MetsaMapFactory mapFactory;

@@ -1,4 +1,4 @@
-package xyz.dswisher.pele.demos;
+package xyz.dswisher.pele.demos.squidlib;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -30,6 +30,7 @@ import squidpony.squidmath.StatefulRNG;
 import java.util.ArrayList;
 import java.util.List;
 
+// Squidlib demo: https://github.com/SquidPony/SquidLib/tree/master/squidlib/src/test/java/squidpony/gdx/examples
 public class EverythingDemo extends ApplicationAdapter {
     private enum Phase {WAIT, PLAYER_ANIM, MONSTER_ANIM}
 

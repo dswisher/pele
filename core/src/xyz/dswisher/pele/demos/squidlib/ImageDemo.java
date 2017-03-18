@@ -1,10 +1,12 @@
-package xyz.dswisher.pele.demos;
+package xyz.dswisher.pele.demos.squidlib;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import squidpony.squidgrid.gui.gdx.*;
@@ -17,6 +19,7 @@ import squidpony.squidmath.RNG;
 
 import java.util.HashMap;
 
+// Squidlib demo: https://github.com/SquidPony/SquidLib/tree/master/squidlib/src/test/java/squidpony/gdx/examples
 public class ImageDemo extends ApplicationAdapter {
     SpriteBatch batch;
 
@@ -33,6 +36,8 @@ public class ImageDemo extends ApplicationAdapter {
     private static final Color bgColor = SColor.DARK_SLATE_GRAY;
     private HashMap<Coord, AnimatedEntity> creatures;
     private Stage stage;
+    private Texture tentacle = null;
+    private TextureRegion tentacleRegion = null;
     @Override
     public void create () {
         batch = new SpriteBatch();
@@ -40,9 +45,12 @@ public class ImageDemo extends ApplicationAdapter {
         height = 20;
         cellWidth = 18;
         cellHeight = 36;
-        display = new SquidLayers(width * 2, height, cellWidth, cellHeight, DefaultResources.narrowNameExtraLarge);
+        display = new SquidLayers(width * 2, height, cellWidth, cellHeight, "demo/Rogue-Zodiac-18x36.fnt");
         display.setAnimationDuration(0.03f);
         stage = new Stage(new ScreenViewport(), batch);
+
+        tentacle = new Texture(Gdx.files.internal("demo/Tentacle.png"));
+        tentacleRegion = new TextureRegion(tentacle);
 
         counter = 0;
         lrng = new LightRNG(0x1337BEEF);
@@ -68,7 +76,7 @@ public class ImageDemo extends ApplicationAdapter {
             if(rng.nextBoolean())
                 creatures.put(monPos, display.animateActor(monPos.x, monPos.y, "M!", 11, true));
             else
-                creatures.put(monPos, display.animateActor(monPos.x, monPos.y, DefaultResources.getTentacle(), true, false));
+                creatures.put(monPos, display.animateActor(monPos.x, monPos.y, tentacleRegion, true, false));
         }
         colors = DungeonUtility.generatePaletteIndices(bareDungeon);
         bgColors = DungeonUtility.generateBGPaletteIndices(bareDungeon);

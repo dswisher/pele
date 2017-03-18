@@ -1,4 +1,4 @@
-package xyz.dswisher.pele.demos;
+package xyz.dswisher.pele.demos.squidlib;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -23,6 +23,7 @@ import squidpony.squidmath.Coord;
 import squidpony.squidmath.CoordPacker;
 import squidpony.squidmath.RNG;
 
+// Squidlib demo: https://github.com/SquidPony/SquidLib/tree/master/squidlib/src/test/java/squidpony/gdx/examples
 public class ZoneDemo extends ApplicationAdapter {
     SpriteBatch batch;
 

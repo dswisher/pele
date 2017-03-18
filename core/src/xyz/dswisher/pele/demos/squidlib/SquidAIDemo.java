@@ -1,4 +1,4 @@
-package xyz.dswisher.pele.demos;
+package xyz.dswisher.pele.demos.squidlib;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 
+// Squidlib demo: https://github.com/SquidPony/SquidLib/tree/master/squidlib/src/test/java/squidpony/gdx/examples
 public class SquidAIDemo extends ApplicationAdapter {
     private enum Phase {MOVE_ANIM, ATTACK_ANIM}
     SpriteBatch batch;
@@ -62,7 +63,7 @@ public class SquidAIDemo extends ApplicationAdapter {
         height = 40;
         cellWidth = 6;
         cellHeight = 12;
-        display = new SquidLayers(width * 2, height, cellWidth, cellHeight, DefaultResources.narrowName);
+        display = new SquidLayers(width * 2, height, cellWidth, cellHeight, "demo/Rogue-Zodiac-6x12.fnt");
         display.setAnimationDuration(0.35f);
         stage = new Stage(new ScreenViewport(), batch);
 
