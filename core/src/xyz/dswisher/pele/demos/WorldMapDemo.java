@@ -1,4 +1,4 @@
-package xyz.dswisher.pele;
+package xyz.dswisher.pele.demos;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
