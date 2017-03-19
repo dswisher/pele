@@ -4,11 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.FileHandleResolver;
 import com.badlogic.gdx.assets.loaders.TextureLoader;
-import com.badlogic.gdx.assets.loaders.resolvers.AbsoluteFileHandleResolver;
-import com.badlogic.gdx.assets.loaders.resolvers.ExternalFileHandleResolver;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
-import com.badlogic.gdx.assets.loaders.resolvers.LocalFileHandleResolver;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
@@ -20,9 +16,6 @@ public class Utility {
 
     private static final String TAG = Utility.class.getSimpleName();
     private static FileHandleResolver _filePathResolver = new InternalFileHandleResolver();
-    // private static FileHandleResolver _filePathResolver = new LocalFileHandleResolver();
-    // private static FileHandleResolver _filePathResolver = new AbsoluteFileHandleResolver();
-    // private static FileHandleResolver _filePathResolver = new ExternalFileHandleResolver();
 
     public static void unloadAsset(String assetFilenamePath) {
         // once the asset manager is done loading

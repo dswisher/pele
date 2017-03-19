@@ -29,12 +29,12 @@ public class PlayerController implements InputProcessor {
         keys.put(Keys.UP, false);
         keys.put(Keys.DOWN, false);
         keys.put(Keys.QUIT, false);
-    };
+    }
 
     static {
         mouseButtons.put(Mouse.SELECT, false);
         mouseButtons.put(Mouse.DOACTION, false);
-    };
+    }
 
     private Entity _player;
 

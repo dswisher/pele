@@ -43,12 +43,12 @@ public class MapManager {
 
     public MapManager() {
         _playerStart = new Vector2(0,0);
-        _mapTable = new Hashtable();
+        _mapTable = new Hashtable<>();
 
         _mapTable.put(TOP_WORLD, "maps/topworld.tmx");
         _mapTable.put(TOWN, "maps/town.tmx");
         _mapTable.put(CASTLE_OF_DOOM, "maps/castle_of_doom.tmx");
-        _playerStartLocationTable = new Hashtable();
+        _playerStartLocationTable = new Hashtable<>();
         _playerStartLocationTable.put(TOP_WORLD, _playerStart.cpy());
         _playerStartLocationTable.put(TOWN, _playerStart.cpy());
         _playerStartLocationTable.put(CASTLE_OF_DOOM, _playerStart.cpy());

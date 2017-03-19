@@ -10,7 +10,6 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
-import javax.rmi.CORBA.Util;
 
 public class Entity {
 
@@ -42,14 +41,14 @@ public class Entity {
 
     public final int FRAME_WIDTH = 16;
     public final int FRAME_HEIGHT = 16;
-    public static Rectangle boundingBox;
+    public Rectangle boundingBox;
 
     public enum State {
         IDLE, WALKING
     }
 
     public enum Direction {
-        UP,RIGHT,DOWN,LEFT;
+        UP, RIGHT, DOWN, LEFT
     }
 
     public Entity(){
@@ -152,10 +151,10 @@ public class Entity {
                         break;
                 } }
         }
-        _walkDownAnimation = new Animation(0.25f, _walkDownFrames, Animation.PlayMode.LOOP);
-        _walkLeftAnimation = new Animation(0.25f, _walkLeftFrames, Animation.PlayMode.LOOP);
-        _walkRightAnimation = new Animation(0.25f, _walkRightFrames, Animation.PlayMode.LOOP);
-        _walkUpAnimation = new Animation(0.25f, _walkUpFrames, Animation.PlayMode.LOOP);
+        _walkDownAnimation = new Animation<>(0.25f, _walkDownFrames, Animation.PlayMode.LOOP);
+        _walkLeftAnimation = new Animation<>(0.25f, _walkLeftFrames, Animation.PlayMode.LOOP);
+        _walkRightAnimation = new Animation<>(0.25f, _walkRightFrames, Animation.PlayMode.LOOP);
+        _walkUpAnimation = new Animation<>(0.25f, _walkUpFrames, Animation.PlayMode.LOOP);
     }
 
     public void dispose() {

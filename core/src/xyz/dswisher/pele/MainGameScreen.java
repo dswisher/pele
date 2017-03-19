@@ -153,7 +153,7 @@ public class MainGameScreen implements Screen {
             return false;
         }
 
-        Rectangle rectangle = null;
+        Rectangle rectangle;
 
         for (MapObject object: mapCollisionLayer.getObjects()) {
             if (object instanceof RectangleMapObject) {
@@ -172,7 +172,7 @@ public class MainGameScreen implements Screen {
         if (mapPortalLayer == null) {
             return false;
         }
-        Rectangle rectangle = null;
+        Rectangle rectangle;
 
         for (MapObject object: mapPortalLayer.getObjects()) {
             if (object instanceof RectangleMapObject) {
