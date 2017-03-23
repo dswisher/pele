@@ -4,15 +4,15 @@ import com.badlogic.gdx.Game;
 
 public class PeleGame extends Game {
 
-    public static final MainGameScreen _mainGameScreen = new MainGameScreen();
+    private MainMenuScreen mainMenuScreen;
 
     @Override
     public void create() {
-        setScreen(_mainGameScreen);
+        mainMenuScreen = new MainMenuScreen(this);
+        setScreen(mainMenuScreen);
     }
 
     @Override
     public void dispose() {
-        _mainGameScreen.dispose();
     }
 }
