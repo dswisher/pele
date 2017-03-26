@@ -36,7 +36,7 @@ public class MainMenuScreen implements Screen {
         Gdx.input.setInputProcessor(stage);
 
         camera = new OrthographicCamera();
-        camera.setToOrtho(false, 800, 400);
+        camera.setToOrtho(false, 800, 600);
 
         // A skin can be loaded via JSON or defined programmatically, either is fine. Using a skin is optional but strongly
         // recommended solely for the convenience of getting a texture, region, etc as a drawable, tinted drawable, etc.
@@ -68,11 +68,11 @@ public class MainMenuScreen implements Screen {
 
         // Create a button with the "default" TextButtonStyle. A 3rd parameter can be used to specify a name other than "default".
         final TextButton playButton = new TextButton("PLAY", textButtonStyle);
-        playButton.setPosition(200, 200);
+        playButton.setPosition(200, 250);
         stage.addActor(playButton);
 
         final TextButton quitButton = new TextButton("QUIT", textButtonStyle);
-        quitButton.setPosition(400, 200);
+        quitButton.setPosition(500, 250);
         stage.addActor(quitButton);
 
         // Add a listener to the button. ChangeListener is fired when the button's checked state changes, eg when clicked,
